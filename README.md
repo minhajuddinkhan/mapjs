@@ -1,17 +1,24 @@
 # mapjs
-utility package for sensitive data filtering.
+Utility package for sensitive data filtering.
 
+
+## Installation
+
+```
+npm i mapjs -S
+```
 
 ## Usage
 
-package.set(<object>, <array|string>, <object|string|whatever>)
+``` package.set( <object> , <array|string>, <object|string|whatever>) ```
 
 
 ## Example
 
 
-
 ```javascript
+const mapper = require('mapjs');
+
 let cid = {
     criminal: {
         id: 123
@@ -19,12 +26,9 @@ let cid = {
 };
 
 mapper.set(cid, 'id', '*');
-console.log(cid);
 ```
-
-### Result
-
-```
+##### Result
+```javascript
 {
     criminal: {
         id: '*'
@@ -37,6 +41,8 @@ console.log(cid);
 
 
 ```javascript
+const mapper = require('mapjs');
+
 let nasa = {
     topSecret: {
         secrets: [ {
@@ -51,11 +57,10 @@ let nasa = {
 
 
 mapper.set(nasa, ['key', 'secret'], { hidden: true});
-console.log(JSON.stringify(nasa, null, 2));
 
 ```
-### Result
-```
+##### Result
+```javascript
 {
   "topSecret": {
     "secrets": [
