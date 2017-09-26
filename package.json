@@ -1,0 +1,23 @@
+{
+  "name": "mapjs",
+  "version": "0.0.1",
+  "description": "utility package for sensitive data filtering. Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha unit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhajuddinkhan/mapjs.git"
+  },
+  "author": "minhajkhan75",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhajuddinkhan/mapjs/issues"
+  },
+  "homepage": "https://github.com/minhajuddinkhan/mapjs#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
