@@ -10,6 +10,8 @@ npm i mapjs -S
 
 ## Usage
 
+Provide your base object, keys to manipulate and the value to be manipulated with respectively.
+
 ``` package.set( <object> , <array|string>, <object|string|whatever>) ```
 
 
