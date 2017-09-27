@@ -33,4 +33,14 @@ describe('Mapper', function() {
         expect(nasa.topSecret.secrets[1].secret).to.equal(setter);
 
     })
+
+  it('Should return you a new object and not change the old one', function () {
+
+    let a = {key: 'key'};
+    const toBeSet = {one: 1};
+    const result = mapper.create(a, 'key', toBeSet );
+    expect(a.key).to.not.equal(toBeSet);
+    expect(result.key).to.equal(toBeSet);
+
+  })
 });
