@@ -1,6 +1,6 @@
 {
   "name": "mapjs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "utility package for sensitive data filtering. Edit",
   "main": "index.js",
   "scripts": {
