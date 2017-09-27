@@ -14,9 +14,15 @@ Provide your base object, keys to manipulate and the value to be manipulated wit
 
 ``` package.set( <object> , <array|string>, <object|string|whatever>) ```
 
+You can clone the object without manipulating the input.
+
+``` result := package.create( <object> , <array|string>, <object|string|whatever>) ```
+
 
 ## Example
+#### set
 
+will update the object ```cid``` itself.
 
 ```javascript
 const mapper = require('mapjs');
@@ -38,6 +44,32 @@ mapper.set(cid, 'id', '*');
 }
 
 ```
+#### create
+will create a clone of the object ```cid```
+
+
+```javascript
+const mapper = require('mapjs');
+
+let cid = {
+    criminal: {
+        id: 123
+    }
+};
+
+const result =  mapper.create(cid, 'id', '*');
+
+```
+##### Result
+```javascript
+{
+    criminal: {
+        id: '*'
+    }
+}
+
+```
+
 
 #### Arguments can be passed as an array too if multiple key need to be mapped
 
