@@ -13,6 +13,7 @@ module.exports = {
 
 function deep(obj, argKey, setter) {
   if(typeof obj !== 'object') return false;
+  if(!obj) return false;
   if(obj.hasOwnProperty(argKey))
     obj[argKey] = setter;
   else {
